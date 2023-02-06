@@ -1,0 +1,68 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+% Sets langauge to english
+\usepackage[english]{babel}
+
+% Math
+\usepackage{mathtools}
+\usepackage{amsmath}
+
+\usepackage{titling}
+
+% Can be used to output example text
+\usepackage{lipsum}
+
+% Allows images on title
+\usepackage{titlepic}
+\usepackage{graphicx}
+
+% Set the margins of the document 
+\usepackage[a4paper, top=2cm, left=3cm, right=3cm, marginparwidth=1.75cm]{geometry}
+
+\title{First LaTeX Doc from Scratch}
+
+% Adding Lincoln Image to title page
+\titlepic{\includegraphics[width=0.3\textwidth]{uni_crest.jpg}}
+
+\author{Lewis Chippendale}
+\date{January 2023}
+
+% Creates bibliography
+\usepackage[style=authoryear-ibid]{biblatex}
+\addbibresource{./Sample.bib}
+
+\begin{document}
+\maketitle
+
+
+% Makes table of contents
+\tableofcontents
+
+% Abstract of the document
+\begin{abstract}
+This report is proof of documented evidence and practice of the use of LaTeX to create a document that can be used as a research report.
+\end{abstract}
+
+\chapter{Introduction}
+\lipsum[1] % Example text
+\section{Intro subsection}
+\lipsum[2] % Example text
+
+\chapter{Report Overview}
+\lipsum[3]
+
+\section{Math display}
+$6*7$
+
+$\sum_{i=1}^{10} t_i$
+
+
+\section{Report Reference Used}
+So today in this section a reference has been used "insert reference text here" \parencite{1}
+
+\printbibliography  
+
+
+
+\end{document}
